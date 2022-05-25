@@ -1,0 +1,130 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="presentation.RecipeListActivity">
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/category_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/bookmarked"
+                android:layout_width="@dimen/category_button"
+                android:layout_height="@dimen/category_button"
+                android:background="@drawable/button_selector"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center_vertical|center_horizontal"
+                android:onClick="buttonFilterOnClick"
+                android:text="@string/recipe_bookmarked"
+                android:textColor="#21596c"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/appetizer"
+                android:layout_width="@dimen/category_button"
+                android:layout_height="@dimen/category_button"
+                android:background="@drawable/button_selector"
+                android:button="@null"
+                android:gravity="center_vertical|center_horizontal"
+                android:onClick="buttonFilterOnClick"
+                android:text="@string/recipe_appetizer"
+                android:textColor="#21596c"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/dessert"
+                android:layout_width="@dimen/category_button"
+                android:layout_height="@dimen/category_button"
+                android:background="@drawable/button_selector"
+                android:button="@null"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="buttonFilterOnClick"
+                android:text="@string/recipe_dessert"
+                android:textColor="#21596c"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/entree"
+                android:layout_width="@dimen/category_button"
+                android:layout_height="@dimen/category_button"
+                android:background="@drawable/button_selector"
+                android:button="@null"
+                android:gravity="center_vertical|center_horizontal"
+                android:onClick="buttonFilterOnClick"
+                android:text="@string/recipe_entree"
+                android:textColor="#21596c"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/soup"
+                android:layout_width="@dimen/category_button"
+                android:layout_height="@dimen/category_button"
+                android:background="@drawable/button_selector"
+                android:button="@null"
+                android:gravity="center_vertical|center_horizontal"
+                android:onClick="buttonFilterOnClick"
+                android:text="@string/recipe_soup"
+                android:textColor="#21596c"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+
+    </HorizontalScrollView>
+
+    <ListView
+        android:id="@+id/listRecipes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="top"
+        android:layout_weight="1"
+        android:choiceMode="singleChoice" >
+
+    </ListView>
+
+</LinearLayout>

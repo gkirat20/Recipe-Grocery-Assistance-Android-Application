@@ -1,0 +1,114 @@
+SET DATABASE UNIQUE NAME HSQLDB7FDC269A14
+SET DATABASE GC 0
+SET DATABASE DEFAULT RESULT MEMORY ROWS 0
+SET DATABASE EVENT LOG LEVEL 0
+SET DATABASE TRANSACTION CONTROL LOCKS
+SET DATABASE DEFAULT ISOLATION LEVEL READ COMMITTED
+SET DATABASE TRANSACTION ROLLBACK ON CONFLICT TRUE
+SET DATABASE TEXT TABLE DEFAULTS ''
+SET DATABASE SQL NAMES FALSE
+SET DATABASE SQL REFERENCES FALSE
+SET DATABASE SQL SIZE TRUE
+SET DATABASE SQL TYPES FALSE
+SET DATABASE SQL TDC DELETE TRUE
+SET DATABASE SQL TDC UPDATE TRUE
+SET DATABASE SQL CONCAT NULLS TRUE
+SET DATABASE SQL UNIQUE NULLS TRUE
+SET DATABASE SQL CONVERT TRUNCATE TRUE
+SET DATABASE SQL AVG SCALE 0
+SET DATABASE SQL DOUBLE NAN TRUE
+SET FILES WRITE DELAY 20
+SET FILES BACKUP INCREMENT FALSE
+SET FILES CACHE SIZE 100
+SET FILES CACHE ROWS 100
+SET FILES SCALE 32
+SET FILES LOB SCALE 32
+SET FILES DEFRAG 0
+SET FILES NIO FALSE
+SET FILES NIO SIZE 256
+SET FILES LOG TRUE
+SET FILES LOG SIZE 0
+CREATE USER SA PASSWORD DIGEST 'd41d8cd98f00b204e9800998ecf8427e'
+ALTER USER SA SET LOCAL TRUE
+CREATE SCHEMA PUBLIC AUTHORIZATION DBA
+SET SCHEMA PUBLIC
+CREATE MEMORY TABLE PUBLIC.RECIPE(RECIPEID VARCHAR(40) NOT NULL PRIMARY KEY,NAME VARCHAR(40),NATIONALITY VARCHAR(20),PREPTIME INTEGER,COOKTIME INTEGER,COOKINGSKILLLEVEL VARCHAR(15),DESCRIPTION VARCHAR(2000),INSTRUCTION VARCHAR(2000),LINK VARCHAR(500))
+CREATE MEMORY TABLE PUBLIC.RECIPEINGREDIENTS(RECIPEID VARCHAR(40) NOT NULL,INGREDIENTNAME VARCHAR(40) NOT NULL,QUANTITY VARCHAR(20),UNIT VARCHAR(20),NOTE VARCHAR(1000),CONSTRAINT CONSTRAINT1 PRIMARY KEY(RECIPEID,INGREDIENTNAME),CONSTRAINT CONSTRAINT2 FOREIGN KEY(RECIPEID) REFERENCES PUBLIC.RECIPE(RECIPEID))
+CREATE MEMORY TABLE PUBLIC.CATEGORIES(RECIPEID VARCHAR(40) NOT NULL,CATEGORY VARCHAR(20) NOT NULL,CONSTRAINT CONSTRAINT4 PRIMARY KEY(RECIPEID,CATEGORY),CONSTRAINT CONSTRAINT5 FOREIGN KEY(RECIPEID) REFERENCES PUBLIC.RECIPE(RECIPEID))
+CREATE MEMORY TABLE PUBLIC.GROCERYLIST(ITEM VARCHAR(100) NOT NULL PRIMARY KEY)
+ALTER SEQUENCE SYSTEM_LOBS.LOB_ID RESTART WITH 1
+SET DATABASE DEFAULT INITIAL SCHEMA PUBLIC
+GRANT USAGE ON DOMAIN INFORMATION_SCHEMA.SQL_IDENTIFIER TO PUBLIC
+GRANT USAGE ON DOMAIN INFORMATION_SCHEMA.YES_OR_NO TO PUBLIC
+GRANT USAGE ON DOMAIN INFORMATION_SCHEMA.TIME_STAMP TO PUBLIC
+GRANT USAGE ON DOMAIN INFORMATION_SCHEMA.CARDINAL_NUMBER TO PUBLIC
+GRANT USAGE ON DOMAIN INFORMATION_SCHEMA.CHARACTER_DATA TO PUBLIC
+GRANT DBA TO SA
+SET SCHEMA SYSTEM_LOBS
+INSERT INTO BLOCKS VALUES(0,2147483647,0)
+SET SCHEMA PUBLIC
+INSERT INTO RECIPE VALUES('1','The Best Classic Chilli','US',5,25,'Easy','The Best Classic Chili - This traditional chili recipe is just like mom used to make with ground beef, beans, and a simple homemade blend of chili seasonings.','1. Add the olive oil to a large soup pot and place it over medium-high heat for two minutes. Add the onion. Cook for 5 minutes, stirring occasionally.$2. Add the ground beef to the pot. Break it apart with a wooden spoon. Cook for 6-7 minutes, until the beef is browned, stirring occasionally.$3. Add the chili powder, cumin, sugar, tomato paste, garlic powder, salt, pepper, and optional cayenne. Stir until well combined.$4. Add the broth, diced tomatoes (with their juice), drained beans, and tomato sauce. Stir well.$5. Bring the liquid to a low boil. Then, reduce the heat (low to medium-low) to gently simmer the chili, uncovered, for 20-25 minutes, stirring occasionally.$6. Remove the pot from the heat. Let the chili rest for 5-10 minutes before serving.','https://www.thewholesomedish.com/the-best-classic-chili/')
+INSERT INTO RECIPE VALUES('2','Chicken Parmesan Sloppy Joes','US',5,15,'Easy','Chicken Parmesan Sloppy Joes are a quick and easy dinner made with a few common ingredients. Ground chicken gets mixed with pasta sauce and cheese then served on buns.','1. Add the oil to a large skillet and place it over medium-high heat.$2. Add the onion. Stir. Cook for 5 minutes.$3. Add the chicken. Break it apart with a wooden spoon. Add the salt and pepper. Cook, stirring occasionally, for 6-8 minutes, until the chicken is no longer pink.$4. Add the pasta sauce. Stir until well mixed. Reduce the heat so the sauce is gently simmering. Simmer for 10 minutes, stirring occasionally.$5. Serve the chicken spooned on hamburger buns and topped with mozzarella cheese.','https://www.thewholesomedish.com/chicken-parmesan-sloppy-joes/#recipe')
+INSERT INTO RECIPE VALUES('3','Thick Italian Hot Chocolate','Italian',10,15,'Easy','A mug full of creamy deliciously Hot Chocolate, made with real chocolate and milk, the ultimate Comfort Food.','1. In a small bowl whisk until smooth, 1/4 cup milk and cornstarch set aside.$2. Sift the cocoa into a medium bowl then add the sugar and whisk together, set aside.$3. In a small/medium pot heat 3/4 cups + 1 tbsp milk until boiling reduce heat to low, start whisking and add the milk/cornstarch mixture then add the cocoa mixture slowly while continually whisking until smooth add the chopped chocolate and whisk for approximately 3 minutes. Serve immediately. Enjoy!','https://anitalianinmykitchen.com/italian-hot-chocolate/')
+INSERT INTO RECIPE VALUES('4','Tequila prawns with pineapple carpaccio','Mexican',20,5,'Medium','Get a taste of vibrant West Coast flavours with these tequila infused prawns.','1. Place the prawns, 1 cup (250ml) tequila, 2 tbsps sea salt and 1 cup (250ml) of water in a bowl, then cover and marinate in the fridge for 10 minutes.$2. Spread the pineapple slices evenly over a large serving platter. Drizzle 1/4 cup (60ml) oil over the pineapple and sprinkle with sea salt.$3. In a small bowl, whisk the lime zest and juice with the remaining olive oil and tequila, then season with salt and pepper. Set the vinaigrette aside.$4. Drain the prawns, reserving the tequila marinade. Place the marinade and 1 cup (250ml) water in a large frypan and bring to the boil. Add the prawns and simmer for 20 seconds. Remove from the heat and stand for 10 minutes or until the prawns are just cooked and almost firm.$5. Drain the prawns, discarding the cooking liquid, then allow the prawns to cool.$6. Toss the capsicum, prawns, vinaigrette and chopped parsley in a bowl. Scatter the prawn salad over the pineapple on the serving platter. Garnish with jalapeno and parsley sprigs.','https://www.delicious.com.au/recipes/tequila-prawns-pineapple-carpaccio/aa0dc03c-e167-46af-b7b1-a27ca996e034?current_section=recipes&r=recipes/collections/6k3n6ehf')
+INSERT INTO RECIPE VALUES('5','French Onion Soup with mini croutons','French',10,85,'Hard','A rich, sweet, flavorful onion laden soup with mini croutons and lots of melted cheese. You can',NULL,NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('1','petite diced tomatoes','1','can(s)','15 oz.')
+INSERT INTO RECIPEINGREDIENTS VALUES('1','red kidney beans','1','can(s)','16 oz., drained and rinsed')
+INSERT INTO RECIPEINGREDIENTS VALUES('1','tomato sauce','1','can(s)','8 oz.')
+INSERT INTO RECIPEINGREDIENTS VALUES('1','beef broth','1 1/2','cup(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('1','salt','1 1/2','tsp(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('1','yellow onion','1','whole','medium, diced')
+INSERT INTO RECIPEINGREDIENTS VALUES('1','lean ground beef','1','lb(s)','90% lean')
+INSERT INTO RECIPEINGREDIENTS VALUES('1','garlic powder','1','tbsp(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('1','olive oil','1','tbsp(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('1','ground black pepper','1/2','tsp(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('1','ground cayenne pepper','1/4','tsp(s)','optional')
+INSERT INTO RECIPEINGREDIENTS VALUES('1','chilli powder','2 1/2','tbsp(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('1','sugar','2','tbsp(s)','granulated')
+INSERT INTO RECIPEINGREDIENTS VALUES('1','ground cumin','2','tbsp(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('1','tomato paste','2','tbsp(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('2','paste sauce','1 1/2','cup(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('2','mozzarella cheese','1','cup(s)','shredded')
+INSERT INTO RECIPEINGREDIENTS VALUES('2','ground chicken','1','lb(s)','I used ground chicken breast')
+INSERT INTO RECIPEINGREDIENTS VALUES('2','olive oil','1','tbsp(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('2','yellow onion','1/2','cup(s)','diced')
+INSERT INTO RECIPEINGREDIENTS VALUES('2','parmesan cheese','1/4','cup(s)','grated')
+INSERT INTO RECIPEINGREDIENTS VALUES('2','ground black pepper','1/4','tsp(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('2','salt','1/4','tsp(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('2','hamburger bun(s)','6',NULL,NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('3','milk','1','cup(s)','2% or whole')
+INSERT INTO RECIPEINGREDIENTS VALUES('3','corn starch','1','tsp(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('3','cocoa','2 1/2','tbsp(s)','unsweetened')
+INSERT INTO RECIPEINGREDIENTS VALUES('3','sugar','2','tbsp(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('3','dark chocolate','3.5','ounce(s)','chopped into small pieces')
+INSERT INTO RECIPEINGREDIENTS VALUES('4','blanco tequila','1','cup(s)','plus 1 tbsp extra')
+INSERT INTO RECIPEINGREDIENTS VALUES('4','jalapeno','1',NULL,'or long green chilli, seeds removed, finely chopped')
+INSERT INTO RECIPEINGREDIENTS VALUES('4','yellow capsicum','1',NULL,'thinly sliced')
+INSERT INTO RECIPEINGREDIENTS VALUES('4','red capsicum','1',NULL,'thinly sliced')
+INSERT INTO RECIPEINGREDIENTS VALUES('4','pineapple','1',NULL,'ripe, peeled, very thinly sliced(a mandoline is ideal)')
+INSERT INTO RECIPEINGREDIENTS VALUES('4','flat-leaf parsley','1','tbsp(s)','finely chopped, plus extra sprigs to garnish')
+INSERT INTO RECIPEINGREDIENTS VALUES('4','lime','1',NULL,'1 tsp grated lime zest plus 2 tbsps lime juice')
+INSERT INTO RECIPEINGREDIENTS VALUES('4','olive oil','1/2','cup(s)','extra virgin')
+INSERT INTO RECIPEINGREDIENTS VALUES('4','large green prawn','600','gram(s)','large, peeled (tails intact), deveined')
+INSERT INTO RECIPEINGREDIENTS VALUES('5','bay leaf','1',NULL,NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('5','dry sherry','1','cup(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('5','crusty bread of your choice','1','loaf(s)','baguette or ciabatta')
+INSERT INTO RECIPEINGREDIENTS VALUES('5','sage','1/2','tsp(s)','dried')
+INSERT INTO RECIPEINGREDIENTS VALUES('5','salt','1/4','tsp(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('5','ground black pepper','1/8','tsp(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('5','gruyere cheese','2','cup(s)','or 8 ounces (200 grams), grated')
+INSERT INTO RECIPEINGREDIENTS VALUES('5','vegetable oil','2','tbsp(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('5','all-purpose flour','3','tbsp(s)',NULL)
+INSERT INTO RECIPEINGREDIENTS VALUES('5','yellow onion','4',NULL,'large, sweet, thinly sliced')
+INSERT INTO RECIPEINGREDIENTS VALUES('5','unsalted butter','4','tbsp(s)','56 grams')
+INSERT INTO RECIPEINGREDIENTS VALUES('5','beef stock','6','cup(s)','(3 pints), low sodium if possible')
+INSERT INTO CATEGORIES VALUES('1','Entree')
+INSERT INTO CATEGORIES VALUES('2','Entree')
+INSERT INTO CATEGORIES VALUES('3','Dessert')
+INSERT INTO CATEGORIES VALUES('4','Appetizer')
+INSERT INTO CATEGORIES VALUES('5','Entree')
+INSERT INTO CATEGORIES VALUES('5','Soup')
+INSERT INTO GROCERYLIST VALUES('milk')
+INSERT INTO GROCERYLIST VALUES('oil')
+INSERT INTO GROCERYLIST VALUES('sugar')
+INSERT INTO GROCERYLIST VALUES('salt')

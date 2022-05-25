@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Recipe App</string>
+    <string name="grocery_button">Grocery List</string>
+    <string name="recipe_button">Recipe List</string>
+
+    <string name="recipe_name_hint">Recipe Name</string>
+    <string name="recipe_skill_hint">Recipe Skill Level</string>
+    <string name="recipe_description_hint">Recipe Description</string>
+    <string name="recipe_ingredients_hint">Recipe Ingredients</string>
+    <string name="recipe_prep_hint">Recipe Prep Time</string>
+    <string name="recipe_cook_hint">Recipe Cook Time</string>
+    <string name="recipe_instructions_hint">Recipe Instructions</string>
+    <string name="recipe_categories_hint">Recipe Categories</string>
+
+    <string name="recipe_skill">Skill Level</string>
+    <string name="recipe_description">Description</string>
+    <string name="recipe_ingredients">Ingredients</string>
+    <string name="recipe_prep_">Prep Time</string>
+    <string name="recipe_cook">Cook Time</string>
+    <string name="recipe_instructions">Instructions</string>
+    <string name="recipe_categories">Categories</string>
+
+    <string name="recipe_bookmarked">Bookmarked</string>
+    <string name="recipe_appetizer">Appetizer</string>
+    <string name="recipe_bread">Bread Recipes</string>
+    <string name="recipe_breakfast">Breakfast and Brunch</string>
+    <string name="recipe_dessert">Dessert</string>
+    <string name="recipe_entree">Entree</string>
+    <string name="recipe_soup">Soup</string>
+
+    <string name="recipe_bookmark_button">Bookmark</string>
+    <string name="recipe_to_grocery_button">Add Ingredients to Grocery</string>
+    <string name="recipe_print_button">Print</string>
+    <string name="recipe_delete_button">Delete</string>
+    <string name="recipe_edit_button">Edit</string>
+
+    <string name="recipe_add_ingredient">Add Ingredient</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="recipe_ingredient_name">Ingredient Name</string>
+    <string name="recipe_ingredient_amount">Amount</string>
+    <string name="recipe_ingredient_units">Units</string>
+    <string name="recipe_ingredient_note">Notes</string>
+
+    <string name="custom_recipe_instruction_hint">Please separate steps with a new line</string>
+
+
+</resources>
