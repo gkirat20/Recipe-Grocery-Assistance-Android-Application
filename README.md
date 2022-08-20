@@ -1,4 +1,5 @@
 # Recipe Grocery Application
+<img src=DemoVideo/DemoVideo.gif> 
 
 # Purpose and Vision
 The Grocery Recipe App will be used to help users look for recipes and organize their grocery list. Furthermore, it will allow the user to plan their meals.
