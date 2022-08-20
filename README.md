@@ -25,18 +25,20 @@ For future implementation, we can have a feature to plan the meals. User can pla
 
 Below is the link to the ARCHITECTURE.md file that explains our architecture.
 
-[Architecture](https://code.cs.umanitoba.ca/winter-2022-a02/group-8/recipe-app/-/blob/main/Architecture/ARCHITECTURE.md)
+[Architecture](https://github.com/gkirat20/Full-Stack-Recipe-Grocery-Android-Application/blob/master/Architecture/ARCHITECTURE.md)
 
 ## Branching Strategy
 
 Below is the link to the Branch-Strategy.md file that explains how we use branching to keep track of our changes in the code.
 
-[Branching Strategy](https://code.cs.umanitoba.ca/winter-2022-a02/group-8/recipe-app/-/blob/main/Branching-Strategy.md)
+[Branching Strategy](https://github.com/gkirat20/Full-Stack-Recipe-Grocery-Android-Application/blob/master/Branching-Strategy.md)
 
 ## Worksheet
 
 Below are the links to the worksheet files that explain how we use branching to keep track of our changes in the code.
 
-[Iteration 1 Worksheet](https://code.cs.umanitoba.ca/winter-2022-a02/group-8/recipe-app/-/blob/main/i1_worksheet.md)
+[Iteration 1 Worksheet](https://github.com/gkirat20/Full-Stack-Recipe-Grocery-Android-Application/blob/master/i1_worksheet.md)
 
-[Iteration 2 Worksheet](https://code.cs.umanitoba.ca/winter-2022-a02/group-8/recipe-app/-/blob/main/i2_worksheet.md)
+[Iteration 2 Worksheet](https://github.com/gkirat20/Full-Stack-Recipe-Grocery-Android-Application/blob/master/i2_worksheet.md)  
+
+[Iteration 3 Worksheet](https://github.com/gkirat20/Full-Stack-Recipe-Grocery-Android-Application/blob/master/i3_worksheet.md) 
