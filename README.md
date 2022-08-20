@@ -1,4 +1,4 @@
-# Recipe Grocery Application
+# Recipe Grocery Android Application
 <img src=DemoVideo/DemoVideo.gif> 
 
 # Purpose and Vision
